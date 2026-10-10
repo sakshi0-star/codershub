@@ -133,5 +133,3 @@ Keep route bundles small and code-split per route (already per-page); server com
 ### Observability
 Request rate/latency/error rate per route; publish-gate rejections (`VERIFICATION_REQUIRED`) as a product metric; verification funnel by step and time-in-review; upload start/complete/resume rates; processing queue depth and failure reasons; playback authorization failures; CDN cache-hit ratio and time-to-first-frame; frontend errors and Core Web Vitals (RUM); and cost per view with anomaly alerts. Structured logs with a request id propagated from the browser.
 
-### Next steps (another week)
-**Build the real upload path first** (presigned multipart + resume across reloads + background tray). Uploading is where creators are most likely to fail and abandon, it's the foundation the rest of the video system depends on, and it's the biggest risk to validate with real files and connections. After that: Playwright coverage for the core flows, then the draft-readiness checklist.
